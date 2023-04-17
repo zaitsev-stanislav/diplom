@@ -1,0 +1,298 @@
+$green: #00b71a;
+$red: #d23335;
+:root {
+  --bg-color: #ffffff; /* светлая тема */
+  --text-color: #333;
+  --text-gray: #858585;
+  --text-ligh-gray: #D6D6D6;
+}
+@mixin shadow{
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.07);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-color);
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+// ОБЩИЕ СТИЛИ
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.backLink {
+  display: block;
+  text-decoration: underline;
+  color: var(--text-gray);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.jc-sb {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.mb {
+  &-32 {
+    margin-bottom: 2rem;
+  }
+}
+
+.cart__available {
+  padding: .5rem;
+  display: inline-block;
+  line-height: 100%;
+  font-size: .8rem;
+  border-radius: .5rem;
+
+  &__free {
+    background-color: $green;
+    color: #fff;
+  }
+
+  &__busy {
+    background-color: $red;
+    color: #fff;
+  }
+}
+
+.btn {
+  border: none;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  display: inline-block;
+  padding: .8rem 1.6rem;
+  border-radius: .65rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+
+// ГЛАВНЫЙ БЛОК - ОБЕРТКА
+.mainContent {
+  padding: 2rem;
+
+  h1 {
+    line-height: 120%;
+    margin-bottom: 2rem;
+  }
+}
+.App {
+  background-color: var(--bg-color);
+  max-width: 100vw;
+  min-height: 100vh;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+  overflow: hidden;
+}
+.App-dark {
+  --bg-color: #1a1a1a; /* светлая тема */
+  --text-color: #e5e5e5;
+  --text-gray: #D6D6D6;
+  --text-ligh-gray: #858585;
+}
+
+
+// НАВИГАЦИЯ
+.navigation {
+  padding: 2rem;
+  box-shadow: 1px 0 12px rgba(0, 0, 0, .07);
+
+  &__title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  &__list {
+    padding-left: 1rem;
+  }
+
+  &__elem {
+    margin-bottom: .5rem;
+    cursor: pointer;
+  }
+}
+
+// СТРАНИЦА ВСЕ КНИГИ
+.withdrawalBooks {
+  gap: 1.5rem;
+
+  &__elem {
+    overflow: hidden;
+    display: block;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .07);
+    transition: all .3s;
+    &:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, .13);
+    }
+  }
+
+  &__img {
+    height: 300px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    font-size: .9rem;
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .cart__available {
+    margin-bottom: .8rem;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  &__desc {
+
+    margin-top: .5rem;
+  }
+
+}
+
+// СТРАНИЦА КОНКРЕТНОЙ КНИГИ
+.currentBook {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  &__img {
+    overflow: hidden;
+    border-radius: 1rem 0 0 1rem;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    padding: 2rem;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .07);
+
+    p {
+      margin-bottom: .5rem;
+    }
+  }
+  &__owner {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+
+  .cart__available {
+    vertical-align: top;
+  }
+}
+
+// О КОМПАНИИ (ГЛАВНАЯ СТРАНИЦА)
+.company {
+  max-width: 1200px;
+  &__text {
+    margin-bottom: 1rem;
+    line-height: 140%;
+  }
+}
+
+// ФОРМА
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: .8rem;
+  &__desc {
+    font-style: normal;
+    font-size: .8rem;
+    color: var(--text-gray);
+    margin-bottom: .5rem;
+  }
+  &__inpText {
+    display: block;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+    padding: .8rem 1.5rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.2rem;
+    width: 100%;
+  }
+  &__btn {
+
+  }
+}
+
+.authPage {
+  max-width: 350px;
+}
+
+.myAccount {
+  &__text {
+    margin-bottom: .5rem;
+  }
+  &__list {
+    padding-left: 1rem;
+    li {
+      margin-bottom: .3rem;
+    }
+  }
+  &__title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 2rem 0;
+  }
+  &__grid {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    @include shadow;
+    .myAccount__list {
+      padding-left: 0;
+    }
+  }
+}
