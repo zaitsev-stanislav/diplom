@@ -10,6 +10,7 @@ import AccountPage from "./pages/AccountPage";
 import AllBooks from "./pages/AllBooks";
 import BookDetailsPage from "./pages/BookDetailsPage";
 import {MainPage} from "./pages/MainPage";
+import AddBookPage from "./pages/AddBookPage";
 
 
 interface IProps {
@@ -38,6 +39,7 @@ function App({getAllBooks, dark}: IProps) {
                     <Route path="/account" element={<AccountPage/>}/>
                     <Route path="/all-books" element={<AllBooks/>}/>
                     <Route path="/all-books/:bookId" element={<BookDetailsPage/>}/>
+                    <Route path="/add-book" element={<AddBookPage/>}/>
                 </Routes>
             </div>
         </div>

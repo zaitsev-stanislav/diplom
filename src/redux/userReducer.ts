@@ -16,7 +16,6 @@ const initialState: IUser = {
     username: ""
 };
 export const userReducer = (state: IUser = initialState, action: IAction): IUser => {
-
     if (action.type === USERINFO) {
         return {
             ...state,

@@ -19,11 +19,15 @@ const Navigation = ({auth, authUsers, ActionTheme}: IProps) => {
                     <li className="navigation__elem"><Link to="/">Главная</Link></li>
                     <li className="navigation__elem"><Link to="/all-books">Все книги</Link></li>
                     {auth ? (
-                        <li className="navigation__elem" onClick={authUsers}>Выйти из аккаунта</li>
+                        <>
+                            <li className="navigation__elem" onClick={authUsers}>Выйти из аккаунта</li>
+                            <li className="navigation__elem"><Link to="/add-book">Добавить книгу</Link></li>
+                            <li className="navigation__elem"><Link to="/account">Мой аккаунт</Link></li>
+                        </>
                     ) : (
                         <li className="navigation__elem"><Link to="/auth">Авторизация</Link></li>
                     )}
-                    <li onClick={ActionTheme}>Сменить тему</li>
+                    <li className="navigation__elem" onClick={ActionTheme}>Сменить тему</li>
                 </ul>
             </nav>
         </>

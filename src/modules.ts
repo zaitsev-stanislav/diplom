@@ -37,6 +37,15 @@ export interface IAction {
     type: string
 }
 
+export const genres = [
+    "Фантастика",
+    "Детективы и триллеры",
+    "Современная проза",
+    "Научная фантастика",
+    "Автобиографии и мемуары",
+    "Любовные романы",
+    "Саморазвитие",
+];
 export const GET_BOOKS = "GET_BOOKS";
 export const AUTH = "AUTH";
 export const USERINFO = "USERINFO";

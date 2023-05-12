@@ -85,6 +85,40 @@
         9,
         10
       ]
+    },
+    {
+      "desired_books": [],
+      "favorite_genres": [],
+      "email": "2001_stas@mail.ru",
+      "phone": "+7(777) 777 77 77",
+      "username": "Stanislav",
+      "password": "password1",
+      "added_books": [],
+      "id": 5
+    },
+    {
+      "desired_books": [],
+      "favorite_genres": [],
+      "email": "test@mail.ru",
+      "phone": "+7(777) 777 77 77",
+      "username": "user1",
+      "password": "password1",
+      "added_books": [
+        11
+      ],
+      "id": 6
+    },
+    {
+      "desired_books": [],
+      "favorite_genres": [],
+      "email": "test11@mail.ru",
+      "phone": "+7(777) 777 77 77",
+      "username": "user1",
+      "password": "password1",
+      "added_books": [
+        12
+      ],
+      "id": 7
     }
   ],
   "books": [
@@ -187,6 +221,26 @@
       "cover": "https://cv9.litres.ru/pub/c/cover_max1500/62780292.jpg",
       "description": "В книге Ольги Примаченко описываются способы улучшения самочувствия и заботы о своем здоровье и благополучии.",
       "owner": 4
+    },
+    {
+      "title": "Test 1",
+      "author": "Станислав",
+      "genre": "",
+      "available": true,
+      "cover": "https://images.unsplash.com/photo-1682343159992-249e6ac38f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "description": "Тестовое заполнение",
+      "owner": 6,
+      "id": 11
+    },
+    {
+      "title": "Любое название",
+      "author": "Станислав",
+      "genre": "Фантастика",
+      "available": true,
+      "cover": "https://images.unsplash.com/photo-1682343159992-249e6ac38f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "description": "Тестовое заполнение",
+      "owner": 7,
+      "id": 12
     }
   ]
 }
