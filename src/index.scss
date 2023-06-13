@@ -45,11 +45,13 @@ img {
 
 .grid {
   display: grid;
+
   &-2 {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     display: grid;
   }
+
   &-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -64,15 +66,18 @@ img {
 }
 
 .mb {
-  &-16{
+  &-16 {
     margin-bottom: 1rem;
   }
+
   &-32 {
     margin-bottom: 2rem;
   }
+
   &-48 {
     margin-bottom: 3rem;
   }
+
   &-64 {
     margin-bottom: 4rem;
   }
@@ -344,12 +349,55 @@ img {
   display: flex;
   width: 80%;
   gap: 3rem;
+
   &__inp {
     margin-bottom: 0;
   }
+
   &__desc {
     margin-bottom: .5rem;
     display: block;
     font-size: .9rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+  .App {
+    grid-template-columns: 1fr;
+  }
+  .grid-4, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .mainContent, .navigation {
+    padding: 1rem;
+  }
+  .filter {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    div {
+      width: calc(50% - 1rem);
+    }
+  }
+  .myAccount__grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .myAccount__list li {
+    margin-bottom: .5rem;
+  }
+  .currentBook {
+    grid-template-columns: 1fr;
+    &__img {
+      border-radius: 1rem 1rem 0 0;
+    }
+    &__text {
+      padding: 1.5rem;
+    }
   }
 }

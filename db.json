@@ -93,7 +93,9 @@
       "phone": "+7(777) 777 77 77",
       "username": "Stanislav",
       "password": "password1",
-      "added_books": [],
+      "added_books": [
+        13
+      ],
       "id": 5
     },
     {
@@ -241,6 +243,16 @@
       "description": "Тестовое заполнение",
       "owner": 7,
       "id": 12
+    },
+    {
+      "title": "Название книги",
+      "author": "Станислав Зайцев",
+      "genre": "",
+      "available": true,
+      "cover": "https://images.unsplash.com/photo-1682343159992-249e6ac38f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "description": "Тестовое заполнение",
+      "owner": 5,
+      "id": 13
     }
   ]
 }
